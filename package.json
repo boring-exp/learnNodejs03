@@ -1,0 +1,12 @@
+{
+  "name": "learnnodejs03",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/path.js --port=3306"
+  },
+  "author": "",
+  "license": "ISC"
+}
