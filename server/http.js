@@ -1,11 +1,11 @@
 // http 的服务端
 // 一直运行的状态
 import http from 'node:http'
-import loginRouter from './login/login.js'
+import { listFile } from './router/file/http-file.js'
 // 路由表
 const router = [
   { path: '/', handle: async (ctx) => { ctx.res.end('根路径') } },
-  loginRouter
+  listFile
 ]
 
 // url参数解析
