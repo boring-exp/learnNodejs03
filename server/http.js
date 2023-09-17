@@ -1,23 +1,47 @@
 // http 的服务端
 // 一直运行的状态
 import http from 'node:http'
-
+import loginRouter from './login/login.js'
 // 路由表
 const router = [
   { path: '/', handle: async (ctx) => { ctx.res.end('根路径') } },
-  { path: '/login', handle: async (ctx) => { ctx.res.end(JSON.stringify({ success: true })) } }
+  loginRouter
 ]
+
+// url参数解析
+// /login?name=1
+function urlParser(originUrl) {
+  const params = originUrl.split('?')
+  const url = params[0]
+  const result = {}
+  if (params.length === 2) {
+    // name=1&test=2&age=3
+    const pArr = params[1].split('&') // ['name=1', 'test=2', 'age=3']
+    pArr.forEach(pair => {
+      const pairArr = pair.split('=')
+      result[pairArr[0]] = pairArr[1]
+    })
+  }
+  return {
+    url,
+    param: result
+  }
+}
+
 
 
 const server = http.createServer(async (req, res) => {
   // http请求通过 [请求方法 + 请求url] 区分接口功能
   // console.log(req.url, req.method)
   // 如何让不同的url+method组合，路由到不同的处理函数
+  const { url, param } = urlParser(req.url)
   const context = {
     req: req,
-    res: res
+    res: res,
+    query: param,
+    url,
   }
-  const routerInstance = router.find(r => r.path === req.url)
+  const routerInstance = router.find(r => r.path === url)
   if (routerInstance) {
     await routerInstance.handle(context)
   }
