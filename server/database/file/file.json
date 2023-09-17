@@ -1,16 +1,1 @@
-[
-  {
-    "uid": "2",
-    "filename": "测试1",
-    "fileSize": "20k",
-    "fileUrl": "http://127.0.0.1:8080/test.txt",
-    "fileUpdateTime": "2023年9月10日"
-  },
-  {
-    "uid": "3",
-    "filename": "测试1",
-    "fileSize": "20k",
-    "fileUrl": "http://127.0.0.1:8080/test.txt",
-    "fileUpdateTime": "2023年9月10日"
-  }
-]
+[{"uid":"oss-f0c6e71c49e2048925218e6ec28cf1fc","filename":"card.jpg","fileType":"image/jpeg","fileSize":"20k","fileUrl":"http://127.0.0.1:3000/download?file=oss-f0c6e71c49e2048925218e6ec28cf1fc","fileUpdateTime":"2023年8月0日"},{"uid":"oss-d3f90d6c46103f0922062a2e7f441419","filename":"bter.png","fileType":"image/png","fileSize":"20k","fileUrl":"http://127.0.0.1:3000/download?file=oss-d3f90d6c46103f0922062a2e7f441419","fileUpdateTime":"2023年8月0日"},{"uid":"oss-2bded1402657c7d42d88baa2d8d56542","filename":"weixin-miniprogram-back-end-master.zip","fileType":"application/x-zip-compressed","fileSize":"20k","fileUrl":"http://127.0.0.1:3000/download?file=oss-2bded1402657c7d42d88baa2d8d56542","fileUpdateTime":"2023年8月0日"},{"uid":"oss-c167f658ed047d2f9aa1029efdf8578b","filename":"oss-d3f90d6c46103f0922062a2e7f441419.zip","fileType":"application/x-zip-compressed","fileSize":"20k","fileUrl":"http://127.0.0.1:3000/download?file=oss-c167f658ed047d2f9aa1029efdf8578b","fileUpdateTime":"2023年8月0日"},{"uid":"oss-9a49dcbbcef0128735b82396de4102ef","filename":"oss-d3f90d6c46103f0922062a2e7f441419.zip","fileType":"application/x-zip-compressed","fileSize":"20k","fileUrl":"http://127.0.0.1:3000/download?file=oss-9a49dcbbcef0128735b82396de4102ef","fileUpdateTime":"2023年8月0日"},{"uid":"oss-45007a42b42452ee93d2b4b1a975ab7d","filename":"oss-d3f90d6c46103f0922062a2e7f441419.png","fileType":"image/png","fileSize":"20k","fileUrl":"http://127.0.0.1:3000/download?file=oss-45007a42b42452ee93d2b4b1a975ab7d","fileUpdateTime":"2023年8月0日"}]

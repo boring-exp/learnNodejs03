@@ -1,11 +1,13 @@
 // http 的服务端
 // 一直运行的状态
 import http from 'node:http'
-import { listFile } from './router/file/http-file.js'
+import { listFile, donwloadFile, uploadFile } from './router/file/http-file.js'
 // 路由表
 const router = [
   { path: '/', handle: async (ctx) => { ctx.res.end('根路径') } },
-  listFile
+  listFile,
+  donwloadFile,
+  uploadFile
 ]
 
 // url参数解析
@@ -34,6 +36,9 @@ const server = http.createServer(async (req, res) => {
   // http请求通过 [请求方法 + 请求url] 区分接口功能
   // console.log(req.url, req.method)
   // 如何让不同的url+method组合，路由到不同的处理函数
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Headers', 'token,content-type')
+  res.setHeader('Access-Control-Allow-Methods', 'PUT,POST,GET')
   const { url, param } = urlParser(req.url)
   const context = {
     req: req,
